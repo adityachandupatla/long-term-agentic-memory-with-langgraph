@@ -1,0 +1,17 @@
+
+3 different types of memory for AI Agents:
+
+	- Semantic memory. Stores facts. Exmaple: "Things I learned in school". For agents, this translates to facts about the user
+
+	- Episodic, i.e, experiences. Example: "Things I did". For agents, this translates to past agent actions
+
+	- Procedural, i.e. instructions. Example: "Instincts or motor skills". For agents, this translates to agent system prompt (this is one extra reason why you need to provide a role to the agent and steer it in a particular direction)
+
+Updating the memoey:
+
+	- We can do it directly in the hot path, i.e., as soon as a user prompts the LLM, before responding we can update the agents memory (all types of memories). This is straightforward to understand and implement but it causes increased latency
+
+	- The better approach is to do it periodically in an async manner in the background!
+
+	Note: If we combine both the approaches, it will yield a superior result, i.e., semantic memory can be updated in the "hot path" because facts need to be recalled quickly. Whereas episodic memory (and procedural memory) can be updated asynchronously in the background, via few-shot examples in the prompt.
+
