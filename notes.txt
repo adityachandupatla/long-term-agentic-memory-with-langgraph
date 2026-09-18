@@ -1,7 +1,7 @@
 
 3 different types of memory for AI Agents:
 
-	- Semantic memory. Stores facts. Exmaple: "Things I learned in school". For agents, this translates to facts about the user
+	- Semantic memory. Stores facts. Example: "Things I learned in school". For agents, this translates to facts about the user
 
 	- Episodic, i.e, experiences. Example: "Things I did". For agents, this translates to past agent actions
 
